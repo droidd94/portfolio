@@ -10,16 +10,16 @@
 <meta property="og:site_name" content="Ameer Fitry">
 <meta property="og:title" content="Ameer Fitry | Full Stack Developer">
 <meta property="og:description" content="Full stack developer (Laravel, Vue, Svelte) based in Kuantan, Pahang, Malaysia. Fast work, open to freelance projects.">
-<meta property="og:url" content="https://droidd94.github.io/portfolio/">
-<meta property="og:image" content="https://droidd94.github.io/portfolio/og-image.png">
+<meta property="og:url" content="https://ameerfitry.pages.dev/">
+<meta property="og:image" content="https://ameerfitry.pages.dev/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Ameer Fitry, Full Stack Developer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ameer Fitry | Full Stack Developer">
 <meta name="twitter:description" content="Full stack developer (Laravel, Vue, Svelte) based in Kuantan, Pahang, Malaysia. Fast work, open to freelance projects.">
-<meta name="twitter:image" content="https://droidd94.github.io/portfolio/og-image.png">
-<link rel="canonical" href="https://droidd94.github.io/portfolio/">
+<meta name="twitter:image" content="https://ameerfitry.pages.dev/og-image.png">
+<link rel="canonical" href="https://ameerfitry.pages.dev/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310304f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%23ffb703'%3EAF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -255,7 +255,7 @@
     nav ul { gap: 9px; font-size: 0.68rem; }
     .services { grid-template-columns: 1fr; }
   }
-  @media (max-width: 420px) { nav ul li:nth-child(4) { display: none; } }
+  @media (max-width: 560px) { nav ul li:nth-child(2), nav ul li:nth-child(5) { display: none; } }
   @media (prefers-reduced-motion: reduce) { .node, .pulse::after { animation: none; } }
 
   /* WhatsApp */
@@ -339,6 +339,23 @@
   .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
   .js .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
+
+  /* Experience timeline */
+  .timeline { position: relative; padding-left: 34px; max-width: 760px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 1.5px; background: var(--line-strong); }
+  .tl-item { position: relative; padding-bottom: 36px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-item::before {
+    content: ""; position: absolute; left: -34px; top: 4px; width: 16px; height: 16px;
+    background: var(--bg); border: 2px solid var(--line-strong); transform: rotate(45deg);
+  }
+  .tl-item.now::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 5px rgba(255,183,3,0.18); }
+  .tl-year { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .tl-item.now .tl-year { color: var(--accent); }
+  .tl-badge { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; border: 1.5px solid var(--accent); color: var(--accent); padding: 1px 6px; }
+  .tl-item h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; }
+  .tl-item p { color: var(--muted); font-size: 0.98rem; }
+  .tl-item .chips { margin-top: 12px; }
 </style>
 <script>
   document.documentElement.classList.add("js");
@@ -358,6 +375,7 @@
     <div class="right">
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Work</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -438,9 +456,36 @@
   </div>
 </section>
 
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">02</span><h2>Experience</h2><span class="rule"></span></div>
+    <!-- EDIT: update roles, years and descriptions here -->
+    <div class="timeline">
+      <div class="tl-item now">
+        <div class="tl-year">2025 – PRESENT <span class="tl-badge">CURRENT</span></div>
+        <h3>Full Stack Developer</h3>
+        <p>Building web systems end to end, from database and backend to frontend, including permit and approval workflow systems for utility corridor projects in Pahang and Perak.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">Vue.js</span><span class="chip">Svelte</span><span class="chip">MySQL</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024 – 2025</div>
+        <h3>Front-end Developer</h3>
+        <p>Built responsive user interfaces and turned designs into clean, working front-end code.</p>
+        <div class="chips"><span class="chip">Vue.js</span><span class="chip">JavaScript</span><span class="chip">HTML &amp; CSS</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2023 – 2024</div>
+        <h3>IT Support / Front-end Developer</h3>
+        <p>Provided IT support while building and maintaining web pages, the starting point of my development career.</p>
+        <div class="chips"><span class="chip">IT support</span><span class="chip">HTML &amp; CSS</span><span class="chip">JavaScript</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="services">
   <div class="wrap">
-    <div class="sec-head"><span class="no">02</span><h2>Services</h2><span class="rule"></span></div>
+    <div class="sec-head"><span class="no">03</span><h2>Services</h2><span class="rule"></span></div>
     <!-- EDIT: add, remove or reword services here -->
     <div class="services">
       <div class="svc">
@@ -483,7 +528,7 @@
 
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head"><span class="no">03</span><h2>Selected work</h2><span class="rule"></span></div>
+    <div class="sec-head"><span class="no">04</span><h2>Selected work</h2><span class="rule"></span></div>
     <div class="grid">
 
       <!-- EDIT: add live links if the sites are public -->
@@ -504,10 +549,10 @@
       </div>
 
       <div class="card">
-        <span class="stamp">APPROVED</span>
+        <span class="stamp wip">PROPOSAL</span>
         <p class="id">P-03 · Freelance</p>
         <h3>Mosque Community Website</h3>
-        <p>A website for a local mosque community: announcements, prayer times, events and contact information in one place.</p>
+        <p>Proposed website for a local mosque community, with announcements, prayer times, events and contact information in one place. Awaiting client go-ahead.</p>
         <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
       </div>
 
@@ -525,7 +570,7 @@
 
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head"><span class="no">04</span><h2>Toolkit</h2><span class="rule"></span></div>
+    <div class="sec-head"><span class="no">05</span><h2>Toolkit</h2><span class="rule"></span></div>
     <div class="skills">
       <div class="skill-group">
         <h3>// FRONTEND</h3>
@@ -546,7 +591,7 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact-box">
-      <p class="mono" style="color: var(--accent); margin-bottom: 10px;">05 · CONTACT</p>
+      <p class="mono" style="color: var(--accent); margin-bottom: 10px;">06 · CONTACT</p>
       <h2>Got a system<br>or a site to build?</h2>
       <p>Send me a message and let's map it out together.</p>
       <div class="btns">
